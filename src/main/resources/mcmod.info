@@ -1,0 +1,16 @@
+[
+{
+  "modid": "voidpower-mekanism",
+  "name": "Void Power: Mekanism Integration",
+  "description": "Unlimited Power for Mekanism.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["azure", "Rires_Magica"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

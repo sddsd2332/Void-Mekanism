@@ -1,0 +1,19 @@
+###########
+# MEKANISM
+###########
+
+tile.GasTankVoid.name=Void Gas Tank
+tile.FluidTankVoid.name=Void Fluid Tank
+tile.BasicBlock.BinVoid.name=Void Bin
+tile.BasicBlock2.InductionCellVoid.name=Void Induction Cell
+tile.BasicBlock2.InductionProviderVoid.name=Void Induction Provider
+tile.EnergyCubeVoid.name=Void Energy Cube
+
+item.VoidControlCircuit.name=Void Control Circuit
+tile.Transmitter.VoidPressurizedTube.name=Void Pressurized Tube
+tile.Transmitter.VoidUniversalCable.name=Void Universal Cable
+tile.Transmitter.VoidMechanicalPipe.name=Void Mechanical Pipe
+tile.Transmitter.VoidLogisticalTransporter.name=Void Logistical Transporter
+tile.Transmitter.VoidThermodynamicConductor.name=Void Thermodynamic Conductor
+item.voidTierInstaller.name=Void Tier Installer
+tier.Void=Void

@@ -1,0 +1,125 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url = "http://files.minecraftforge.net/maven" }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
+    }
+}
+apply plugin: 'net.minecraftforge.gradle.forge'
+
+version = "2.0.0" + getRevision()
+group = "com.github.stilllogic20.voidpower.addon.mekanism"
+archivesBaseName = "voidpower-mekanism-addon"
+
+sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
+compileJava {
+    sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+repositories {
+    maven {
+        name "localhost"
+        url "http://localhost:33480/local/"
+    }
+    maven {
+        name 'ForgeFS'
+        url 'https://files.minecraftforge.net/maven'
+    }
+    maven {
+        name 'amadornes'
+        url 'https://maven.amadornes.com/'
+    }
+    maven {
+        name 'prog'
+        url 'http://dvs1.progwml6.com/files/maven'
+    }
+    maven {
+        name 'tesla'
+        url 'https://maven.mcmoddev.com'
+    }
+    maven {
+        name 'curseforge'
+        url 'https://minecraft.curseforge.com/api/maven/'
+    }
+    maven {
+        name 'opencomputers'
+        url 'http://maven.cil.li/'
+    }
+    maven {
+        name 'hwyla'
+        url 'https://tehnut.info/maven'
+    }
+    maven {
+        name 'CoFH Maven'
+        url 'https://maven.covers1624.net'
+    }
+    maven {
+        name 'buildcraft'
+        url 'https://mod-buildcraft.com/maven/'
+    }
+    maven {
+        name 'tterrag'
+        url 'https://maven.tterrag.com/'
+    }
+    maven {
+        name 'ic2'
+        url 'http://maven.ic2.player.to'
+    }
+    maven {
+        name 'BlameJared - Crafttweaker'
+        url 'https://maven.blamejared.com/'
+    }
+    maven {
+        name 'thiakil'
+        url 'https://maven.thiakil.com'
+    }
+}
+
+minecraft {
+    version = "1.12.2-14.23.5.2836"
+    runDir = "run"
+    mappings = "snapshot_20180814"
+}
+
+dependencies {
+    deobfCompile "mekanism:Mekanism:${project.minecraft.version}-9.7.2.homebaked"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:5.4.2"
+    testImplementation "org.junit.jupiter:junit-jupiter-engine:5.4.2"
+}
+
+jar {
+    manifest {
+        attributes "FMLCorePluginContainsFMLMod": "*"
+        attributes "FMLCorePlugin": "com.github.stilllogic20.voidpower.addon.mekanism.common.patcher.PatcherCorePlugin"
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+processResources {
+    inputs.property "name", name
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+        expand 'version': project.version, 'mcversion': project.minecraft.version
+    }
+
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}
+
+def getRevision() {
+    def out = new StringBuilder()
+    def git = "git.exe rev-parse --short HEAD".execute()
+    git.consumeProcessOutput(out, System.err)
+    git.waitForOrKill(2000)
+    return "." + out.toString().replaceAll("\r?\n", "")
+}
+

@@ -1,0 +1,19 @@
+###########
+# MEKANISM
+###########
+
+tile.GasTankVoid.name=虚空ガスタンク
+tile.FluidTankVoid.name=虚空液体タンク
+tile.BasicBlock.BinVoid.name=虚空ビン
+tile.BasicBlock2.InductionCellVoid.name=ヴォイドインダクションセル
+tile.BasicBlock2.InductionProviderVoid.name=ヴォイドインダクションプロバイダ
+tile.EnergyCubeVoid.name=虚空エネルギーキューブ
+
+item.VoidControlCircuit.name=虚空制御回路
+tile.Transmitter.VoidPressurizedTube.name=虚空加圧チューブ
+tile.Transmitter.VoidUniversalCable.name=ヴォイドユニバーサルケーブル
+tile.Transmitter.VoidMechanicalPipe.name=ヴォイドメカニカルパイプ
+tile.Transmitter.VoidLogisticalTransporter.name=虚空ロジスティカルトランスポーター
+tile.Transmitter.VoidThermodynamicConductor.name=虚空サーモダイナミックコンダクター
+item.voidTierInstaller.name=虚空ランクインストーラ
+tier.Void=虚空
