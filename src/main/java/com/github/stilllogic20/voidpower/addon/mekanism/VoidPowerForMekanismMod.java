@@ -14,8 +14,8 @@ public final class VoidPowerForMekanismMod {
 
     @SidedProxy(
         modId = MODID,
-        clientSide = "ClientProxy",
-        serverSide = "CommonProxy"
+        clientSide = "com.github.stilllogic20.voidpower.addon.mekanism.client.ClientProxy",
+        serverSide = "com.github.stilllogic20.voidpower.addon.mekanism.common.CommonProxy"
     )
     private static CommonProxy proxy;
 

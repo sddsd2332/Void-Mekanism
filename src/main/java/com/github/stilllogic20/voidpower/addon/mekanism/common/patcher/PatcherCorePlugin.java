@@ -8,12 +8,12 @@ public class PatcherCorePlugin extends FMLCorePlugin {
 
     @Override
     public String[] getASMTransformerClass() {
-        return new String[] { "VariantPatcherTransformer" };
+        return new String[] { "com.github.stilllogic20.voidpower.addon.mekanism.common.patcher.VariantPatcherTransformer" };
     }
 
     @Override
     public String getModContainerClass() {
-        return "PatcherModContainer";
+        return "com.github.stilllogic20.voidpower.addon.mekanism.common.patcher.PatcherModContainer";
     }
 
 }
