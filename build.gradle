@@ -9,7 +9,7 @@ buildscript {
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
 
-version = "2.0.0" + getRevision()
+version = "2.0.1" + getRevision()
 group = "com.github.stilllogic20.voidpower.addon.mekanism"
 archivesBaseName = "voidpower-mekanism-addon"
 
