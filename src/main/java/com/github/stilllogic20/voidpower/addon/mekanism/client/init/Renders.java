@@ -30,7 +30,6 @@ public final class Renders {
     @Construct
     public static void construct() {
         MinecraftForge.EVENT_BUS.register(new Renders());
-        RenderEnergyCube.COLORS = ArrayUtils.add(RenderEnergyCube.COLORS, new int[] { 20, 20, 20 });
     }
 
     @SubscribeEvent

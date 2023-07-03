@@ -21,7 +21,7 @@ public class Integrations {
         EnumHelper.addEnum(CableTier.class, "VOID", new Class<?>[] { int.class }, Integer.MAX_VALUE);
         EnumHelper.addEnum(ConductorTier.class, "VOID", new Class<?>[] { double.class, double.class, double.class, ColourRGBA.class }, 5.0D, 1.0D, 100000.0D, new ColourRGBA(0.1D, 0.1D, 0.1D, 1.0D));
         EnumHelper.addEnum(EnergyCubeTier.class, "VOID", new Class<?>[] { double.class, double.class }, 16384000000.0, Double.MAX_VALUE);
-        EnumHelper.addEnum(FactoryTier.class, "VOID", new Class<?>[] { int.class, ResourceLocation.class }, 7, new ResourceLocation("mekanism", "ui/factory/GuiEliteFactory.png"));
+        EnumHelper.addEnum(FactoryTier.class, "VOID", new Class<?>[] { int.class, ResourceLocation.class }, 7, new ResourceLocation("mekanism", "gui/factory/GuiEliteFactory.png"));
         EnumHelper.addEnum(FluidTankTier.class, "VOID", new Class<?>[] { int.class, int.class }, 1073741823, 1073741823);
         EnumHelper.addEnum(GasTankTier.class, "VOID", new Class<?>[] { int.class, int.class }, 1073741823, 1073741823);
         EnumHelper.addEnum(InductionCellTier.class, "VOID", new Class<?>[] { double.class }, 32768000000000.);
