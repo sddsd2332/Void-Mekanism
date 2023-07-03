@@ -9,7 +9,7 @@ buildscript {
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
 
-version = "2.0.1" + getRevision()
+version = "2.0.1"
 group = "com.github.stilllogic20.voidpower.addon.mekanism"
 archivesBaseName = "voidpower-mekanism-addon"
 
@@ -114,12 +114,3 @@ processResources {
         exclude 'mcmod.info'
     }
 }
-
-def getRevision() {
-    def out = new StringBuilder()
-    def git = "git.exe rev-parse --short HEAD".execute()
-    git.consumeProcessOutput(out, System.err)
-    git.waitForOrKill(2000)
-    return "." + out.toString().replaceAll("\r?\n", "")
-}
-
